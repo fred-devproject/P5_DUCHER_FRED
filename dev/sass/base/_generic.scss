@@ -1,0 +1,63 @@
+//* généric stylesheet //
+
+/** Font 
+font-family: 'Old Standard TT', serif;
+font-family: 'Arimo', sans-serif; **/
+
+/** Meyer's CSS Reset **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.header {
+
+    width:100vw;
+    height:20vh;
+    background-color: $blue;
+    color:$white;
+    text-align: center;
+    font-family:'Old Standard TT', serif; 
+    font-size:4em;
+
+    h1 {
+        padding-top: 0.8em;
+    }
+}
+
+.footer {
+
+    width:100vw;
+    height:12vh;
+    background-color: $blue;
+    color:white;
+    font-family: 'Old Standard TT', serif;
+}
+
+.navtop {
+    text-align: right;
+    font-family: 'Old Standard TT', serif;
+    margin-top: 1vh;
+
+    &__link {
+        text-decoration: none;
+        color: $blue;
+        font-size: 1.8em;
+        margin-right:1.5em;
+    }
+}
