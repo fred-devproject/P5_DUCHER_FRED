@@ -1,0 +1,180 @@
+/** Feuille de style SASS */
+/** Font 
+font-family: 'Old Standard TT', serif;
+font-family: 'Arimo', sans-serif; **/
+/** Meyer's CSS Reset **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: #e3d2beff;
+}
+
+.header {
+  width: 90vw;
+  height: 15vh;
+  margin: auto;
+  background-color: #97562bff;
+  color: #e3d2beff;
+  text-align: center;
+  font-family: "Old Standard TT", serif;
+  font-size: 4em;
+  overflow: hidden;
+  border: 1px solid #542510ff;
+  border-radius: 0 0 10px 10px;
+}
+.header h1 {
+  padding-top: 0.5em;
+}
+
+.navtop {
+  width: 90vw;
+  text-align: right;
+  background-color: #ca9c68ff;
+  font-family: "Old Standard TT", serif;
+  margin: 1vh auto 1vh auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  box-sizing: border-box;
+  border: 1px solid #542510ff;
+  border-radius: 10px;
+}
+.navtop__link {
+  text-decoration: none;
+  color: #542510ff;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 0 1em 0 1em;
+}
+
+.bloc1 {
+  width: 90vw;
+  height: 40vh;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #542510ff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.bloc1__img {
+  widows: 100%;
+  height: 100%;
+  background-image: url(images/bearsbackground.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+}
+.bloc1__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  padding-top: 3em;
+  padding-left: 1em;
+  font-family: "Old Standard TT", serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #542510ff;
+}
+.bloc1__text h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.bloc2 {
+  width: 90vw;
+  margin: 1vh auto 1vh auto;
+  box-sizing: border-box;
+  background-color: #ca9c68ff;
+  border: 1px solid #542510ff;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.bloc2 h2 {
+  width: 100%;
+  font-family: "Old Standard TT", serif;
+  font-size: 2em;
+  font-weight: 600;
+  margin: 1em 0 1em 0;
+  color: #542510ff;
+}
+.bloc2__itembox {
+  width: 20em;
+  margin: 1em auto 2em auto;
+  border: 1px solid #542510ff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px #6e482fff;
+  background-color: #e3d2beff;
+}
+.bloc2__itembox img {
+  margin: 1em auto 1em auto;
+  border: 1px solid #6e482fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #6e482fff;
+}
+.bloc2__itembox h3 {
+  width: 100%;
+  font-family: "Old Standard TT", serif;
+  font-size: 2em;
+  font-weight: 600;
+  margin: 1em 0 1em 0;
+  color: #97562bff;
+}
+.bloc2__itembox a {
+  color: #97562bff;
+  font-family: "Old Standard TT", serif;
+  font-size: 1.5em;
+  text-decoration: none;
+  margin-bottom: 1em;
+}
+
+.footer {
+  width: 90vw;
+  height: 12vh;
+  line-height: 12vh;
+  margin: auto;
+  background-color: #97562bff;
+  overflow: hidden;
+  font-family: "Old Standard TT", serif;
+  border: 1px solid #542510ff;
+  border-radius: 10px 10px 0 0;
+}
+
+.navbot {
+  font-family: "Old Standard TT", serif;
+  display: flex;
+  justify-content: space-between;
+}
+.navbot a {
+  margin: 0 2em 0 2em;
+  color: #e3d2beff;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
