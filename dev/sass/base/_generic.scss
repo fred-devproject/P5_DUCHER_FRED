@@ -25,39 +25,186 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
+body {
+    background-color: $sable;
+}
+
 .header {
 
-    width:100vw;
-    height:20vh;
-    background-color: $blue;
-    color:$white;
+    width:90vw;
+    height:15vh;
+    margin: auto;
+    background-color: $havane;
+    color:$sable;
     text-align: center;
     font-family:'Old Standard TT', serif; 
     font-size:4em;
+    overflow: hidden;
+    border: 1px solid $brown;
+    border-radius: 0 0 10px 10px;
+    
 
     h1 {
-        padding-top: 0.8em;
+
+        padding-top: 0.5em;
     }
+}
+
+.navtop {
+
+    width: 90vw;
+    text-align: right;
+    background-color: $camel;
+    font-family: 'Old Standard TT', serif;
+    margin: 1vh auto 1vh auto;
+    padding-top: 0.5em;
+    padding-bottom:0.5em;
+    box-sizing: border-box;
+    border: 1px solid $brown;
+    border-radius: 10px;
+
+    &__link {
+
+        text-decoration: none;
+        color: $brown;
+        font-size: 1.4em;
+        font-weight: 600;
+        margin:0 1em 0 1em ;
+
+    }
+}
+
+.bloc1 {
+    width:90vw;
+    height: 40vh;
+    margin:auto;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid $brown;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    &__img {
+    
+    widows: 100%;
+    height:100%;
+    background-image: url(images/bearsbackground.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    }
+
+    &__text {
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 35%;
+        padding-top: 3em;
+        padding-left:1em;
+        font-family:'Old Standard TT', serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        color:$brown;
+
+        h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 1em;
+        }
+        
+
+    }
+}
+
+.bloc2 {
+    width: 90vw;
+    margin:1vh auto 1vh auto;
+    box-sizing: border-box;
+    background-color: $camel;
+    border: 1px solid $brown;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    h2 {
+        width: 100%;
+        font-family:'Old Standard TT', serif; 
+        font-size: 2em;
+        font-weight:600;
+        margin: 1em 0 1em 0;
+        color: $brown;
+    }
+
+    &__itembox {
+        width:20em;
+        margin:1em auto 2em auto;
+        border: 1px solid $brown;
+        border-radius: 5px;
+        box-shadow: 3px 3px 15px $lightbrown;
+        background-color: $sable;
+        
+        
+        img {
+
+            margin: 1em auto 1em auto;
+            border: 1px solid $lightbrown;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px $lightbrown;
+        }
+
+        h3 {
+            width:100%;
+            font-family:'Old Standard TT', serif; 
+            font-size: 2em;
+            font-weight:600;
+            margin: 1em 0 1em 0;
+            color: $havane;
+        }
+
+        a {
+            color: $havane;
+            font-family: 'Old Standard TT', serif;
+            font-size:1.5em;
+            text-decoration: none;
+            margin-bottom: 1em;
+        }
+    }
+    
 }
 
 .footer {
 
-    width:100vw;
+    width:90vw;
     height:12vh;
-    background-color: $blue;
-    color:white;
+    line-height: 12vh;
+    margin: auto;
+    background-color: $havane;
+    overflow: hidden;
     font-family: 'Old Standard TT', serif;
+    border: 1px solid $brown;
+    border-radius:10px 10px 0 0;
+    
+
 }
 
-.navtop {
-    text-align: right;
-    font-family: 'Old Standard TT', serif;
-    margin-top: 1vh;
 
-    &__link {
-        text-decoration: none;
-        color: $blue;
-        font-size: 1.8em;
-        margin-right:1.5em;
+.navbot {
+
+    font-family: 'Old Standard TT', serif;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        margin: 0 2em 0 2em;
+        color:$sable;
+        font-size:1.5em;
+        text-decoration:none;
+    
     }
+    
 }
