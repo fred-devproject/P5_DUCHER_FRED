@@ -30,18 +30,18 @@ body {
     background-color: $sable;
 }
 
-.header {
+#header {
 
     width:90vw;
     height:15vh;
     margin: auto;
-    background-color: $havane;
-    color:$sable;
+    background-color: $camel;
+    color:$brown;
     text-align: center;
     font-family:'Old Standard TT', serif; 
     font-size:4em;
     overflow: hidden;
-    border: 1px solid $brown;
+    border: 1px solid $havane;
     border-radius: 0 0 10px 10px;
     
 
@@ -52,7 +52,7 @@ body {
 }
 
 .navtop {
-
+    @include border;
     width: 90vw;
     text-align: right;
     background-color: $camel;
@@ -60,29 +60,25 @@ body {
     margin: 1vh auto 1vh auto;
     padding-top: 0.5em;
     padding-bottom:0.5em;
-    box-sizing: border-box;
-    border: 1px solid $brown;
-    border-radius: 10px;
+    
 
     &__link {
 
         text-decoration: none;
         color: $brown;
         font-size: 1.4em;
-        font-weight: 600;
         margin:0 1em 0 1em ;
 
     }
 }
 
 .bloc1 {
+
+    @include border;
     width:90vw;
     height: 40vh;
     margin:auto;
     position: relative;
-    box-sizing: border-box;
-    border: 1px solid $brown;
-    border-radius: 10px;
     overflow: hidden;
     
     &__img {
@@ -106,12 +102,10 @@ body {
         padding-left:1em;
         font-family:'Old Standard TT', serif;
         font-size: 1.5em;
-        font-weight: 600;
         color:$brown;
 
         h2 {
             font-size: 1.2em;
-            font-weight: 600;
             margin-bottom: 1em;
         }
         
@@ -120,73 +114,59 @@ body {
 }
 
 .bloc2 {
+    @include border;
     width: 90vw;
+    margin:1vh auto 1vh auto;
+    background-color: $camel;
+    text-align: center;
+    
+
+    h2 {
+        font-family:'Old Standard TT', serif; 
+        font-size: 2.5em;
+        margin: 5vh auto 5vh auto;
+        color: $brown;
+    }
+}
+
+.card {
+    width:70%;
     margin:1vh auto 1vh auto;
     box-sizing: border-box;
     background-color: $camel;
-    border: 1px solid $brown;
-    border-radius: 10px;
-    text-align: center;
+    border-top: 1px solid $havane;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    
 
-    h2 {
-        width: 100%;
-        font-family:'Old Standard TT', serif; 
-        font-size: 2em;
-        font-weight:600;
-        margin: 1em 0 1em 0;
-        color: $brown;
+    &__pics {
+        margin: 2vh auto 2vh auto;
+        
     }
-
-    &__itembox {
-        width:20em;
-        margin:1em auto 2em auto;
-        border: 1px solid $brown;
-        border-radius: 5px;
-        box-shadow: 3px 3px 15px $lightbrown;
-        background-color: $sable;
-        
-        
-        img {
-
-            margin: 1em auto 1em auto;
-            border: 1px solid $lightbrown;
-            border-radius: 5px;
-            box-shadow: 0px 0px 5px $lightbrown;
-        }
+    &__content {
+        height:75%;
+        font-family:'Old Standard TT', serif; 
+        color: $brown;
+        font-size: 1.2em;
+        padding-left: 3vh;
+        padding-right: 3vh;
 
         h3 {
-            width:100%;
-            font-family:'Old Standard TT', serif; 
-            font-size: 2em;
-            font-weight:600;
-            margin: 1em 0 1em 0;
-            color: $havane;
-        }
-
-        a {
-            color: $havane;
-            font-family: 'Old Standard TT', serif;
-            font-size:1.5em;
-            text-decoration: none;
-            margin-bottom: 1em;
+            margin: 2vh auto 2vh auto;
+            font-size: 1.8em;
         }
     }
-    
-}
 
-.footer {
+}
+#footer {
 
     width:90vw;
     height:12vh;
     line-height: 12vh;
     margin: auto;
-    background-color: $havane;
+    background-color: $camel;
     overflow: hidden;
     font-family: 'Old Standard TT', serif;
-    border: 1px solid $brown;
+    border: 1px solid $havane;
     border-radius:10px 10px 0 0;
     
 
@@ -201,7 +181,7 @@ body {
 
     a {
         margin: 0 2em 0 2em;
-        color:$sable;
+        color:$brown;
         font-size:1.5em;
         text-decoration:none;
     
