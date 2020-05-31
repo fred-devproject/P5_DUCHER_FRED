@@ -149,11 +149,29 @@ body {
         font-size: 1.2em;
         padding-left: 3vh;
         padding-right: 3vh;
-
+        
+        p {
+            margin-bottom: 2vh;
+        }
         h3 {
             margin: 2vh auto 2vh auto;
             font-size: 1.8em;
+
         }
+    }
+    &__btn {
+
+        @include border;
+        background-color: $lightbrown;
+        font-family:'Old Standard TT', serif;
+        font-size: 1em;
+        color: $sable;
+        text-decoration: none;
+        padding: 0.5em;
+    }
+    &__btn:hover {
+
+        background-color: $havane;
     }
 
 }

@@ -135,9 +135,26 @@ body {
   padding-left: 3vh;
   padding-right: 3vh;
 }
+.card__content p {
+  margin-bottom: 2vh;
+}
 .card__content h3 {
   margin: 2vh auto 2vh auto;
   font-size: 1.8em;
+}
+.card__btn {
+  box-sizing: border-box;
+  border: 1px solid #97562bff;
+  border-radius: 10px;
+  background-color: #6e482fff;
+  font-family: "Old Standard TT", serif;
+  font-size: 1em;
+  color: #e3d2beff;
+  text-decoration: none;
+  padding: 0.5em;
+}
+.card__btn:hover {
+  background-color: #97562bff;
 }
 
 #footer {
