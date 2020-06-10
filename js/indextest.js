@@ -1,5 +1,21 @@
-//création d'une requete fetch pour récuperer les données de l'api
-import {getDataFromApi} from './api.js';
+//import du module de requete pour recuperer les données 
+// creation d'un module pour les requetes API 
+let objectId = window.location.search.substring(1);
+
+//requete pour le chargement de la liste complete d'objet
+const URL = "http://localhost:3000/api/teddies/" + objectId;
+
+// requete GET
+let getDataFromApi = (objectList) => {
+    let requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };  
+    fetch(URL, requestOptions)
+    .then(response => response.json())
+    .then(result => objectList(result))
+    .catch(error => alert('erreur de chargement', error));
+};
 
 
 let createTeddies = (teddies) => {
@@ -34,13 +50,8 @@ let createTeddies = (teddies) => {
         contentElt.classList.add ('card__content');
         btnElt.classList.add ('card__btn');
 
-        btnElt.setAttribute('href', 'product.html?' + teddy._id);
+        btnElt.setAttribute('href', 'product.html?id=' + teddy._id);
     }
 };
 
 getDataFromApi(createTeddies);  
-
-
-
-
-

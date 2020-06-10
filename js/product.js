@@ -1,21 +1,36 @@
-// fichier index.js pour l'affichage dynamique des produits sur la page d'accueuil 
+
+import {getDataFromApi} from './api.js';
 
 
-// selection d'un élément du DOM pour apporter des modification ultérieurement
+let oneTeddy = document.querySelector('.bloc2') ;
+
+let myTeddy = (teddies) => {
+
+    
+
+    for (oneTeddy of teddies){
+        oneTeddy.appendChild (nameElt);
+        oneTeddy.appendChild (picElt);
+        oneTeddy.appendChild (descriptionElt);
+        oneTeddy.appendChild (priceElt);
+
+        let nameElt = document.createElement ('h3');
+        let picElt = document.createElement ('img')        
+        let descriptionElt = document.createElement ('p');    
+        let priceElt = document.createElement ('p');   
+            
+                
+        nameElt.textContent = oneTeddy.name;
+        picElt.src = oneTeddy.imageUrl ;
+        descriptionElt.textContent = oneTeddy.description;
+        priceElt.textContent = oneTeddy.price;
+    };
+};  
+     
+
+getDataFromApi(myTeddy);
 
 
-let getDataFromApi = (method, url, callback) => {
-  let request = new XMLHttpRequest (); /* Création d'une constante requestApi */
-      request.open (method,url);
-      request.onreadystatechange = function () { /* création d'une fonction qui verifie l'état de la requete */
-          if (request.readyState === XMLHttpRequest.DONE && request.status === 200) { /* on verifie l'état DONE et le status 200 (succès) */
-              callback(JSON.parse(request.responseText));
-              //createTeddies(JSON.parse(request.responseText);
-          }
-      }
-  request.send ();
-};
 
 
-getDataFromApi("GET","http://localhost:3000/api/teddies/", createTeddies);
 
