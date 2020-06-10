@@ -92,7 +92,7 @@ body {
   padding-top: 3em;
   padding-left: 1em;
   font-family: "Old Standard TT", serif;
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #542510ff;
 }
 .bloc1__text h2 {
@@ -108,11 +108,47 @@ body {
   margin: 1vh auto 1vh auto;
   background-color: #ca9c68ff;
   text-align: center;
+  padding: 3vh 2vw 3vh 2vw;
 }
 .bloc2 h2 {
   font-family: "Old Standard TT", serif;
   font-size: 2.5em;
   margin: 5vh auto 5vh auto;
+  color: #542510ff;
+}
+.bloc2 h3 {
+  font-size: 1.8em;
+  margin: 3vh auto 3vh auto;
+}
+.bloc2 img {
+  box-sizing: border-box;
+  border: 1px solid #97562bff;
+  border-radius: 10px;
+  margin-bottom: 2vh;
+}
+.bloc2__item {
+  font-family: "Old Standard TT", serif;
+  font-size: 1.5em;
+  margin: 5vh auto 5vh auto;
+  color: #542510ff;
+}
+.bloc2__item img {
+  box-sizing: border-box;
+  border: 1px solid #97562bff;
+  border-radius: 10px;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+.bloc2__item img:hover {
+  transform: scale(2);
+}
+.bloc2__item--price {
+  font-weight: 600;
+  margin: 3vh auto 3vh auto;
+}
+.bloc2__option {
+  font-family: "Old Standard TT", serif;
+  font-size: 1.5em;
   color: #542510ff;
 }
 
