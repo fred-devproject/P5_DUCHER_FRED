@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="./style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Old+Standard+TT:ital@1&display=swap" rel="stylesheet">
     <link rel="icon" href="./favicon.ico" />
- 
-    <script src="./js/producttest.js" defer></script>
    
     <title>Oribears Accueil</title>
-
-    
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/apptest.js" defer></script>
+	<script>
+    $(document).ready(function(){
+        objectSelected();
+        addtoStorage();
+    });
+	</script> 
 </head>
 <body>
     <header id="header">
-        <h1>OriBears</h1>
+        <h1><a href="index.html">Oribears</a></h1>
     </header>
     <nav class="navtop">
-        <a href="./prod/pages/contact.html" class="navtop__link">Contact</a>
-        <a href="./prod/pages/panier.html" class="navtop__link">Panier</a>
+        <a href="./panier.html" class="navtop__link">Panier</a>
     </nav>
     <main id="mainbloc">
         <div class="bloc1">
@@ -33,20 +35,19 @@
         </div>
         <div class="bloc2">
             <article class="bloc2__item">
-            </article>        
-            <div class="bloc2__option">
-                <label for="color-select">Choisissez votre couleur</label>
-                    <select name="pets" id="color-select">
-                        <option value="">--Couleur--</option>
-                        
-                    </select>
-            </div>
+            </article>            
+            <label for="options" class="bloc2__optionslabel">Choisissez votre couleur </label>
+                <select name="bearcolors" id="options" class="">
+                    <option value="">---Votre choix---</option>
+                </select>
+            <button id="addtocart__btn">Ajouter au panier</button>
+            <div id="validate__msg"></div>
         </div>
     </main>
     <footer id="footer">
         <nav class="navbot">
             <a href="./prod/pages/mentions.html" class="navtbot__link">Mentions légales</a>
-            <a href="./prod/pages/contact.html" class="navtbot__link">Contactez nous</a>
+            <a href="mailto:contact@oribears.com" class="navbot__link">Contactez nous</a>
         </nav>
         
     </footer>

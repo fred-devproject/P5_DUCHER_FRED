@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Old+Standard+TT:ital@1&display=swap" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/apptest.js"></script>
+    <script>
+        $(document).ready(function(){
+            loadCartPage();
+        });
+        </script> 
+   
+    <title>Votre panier</title>
+
+    
+
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">Oribears</a></h1>
+    </header>
+    <nav class="navtop">
+        <a href="./panier.html" class="navtop__link">Panier</a>
+    </nav>
+    <main id="mainbloc">
+        <div class="bloc1">
+            <div class="bloc1__img"></div>
+            <article class="bloc1__text">
+                <h2>Oribears, Un authentique Teddy bears</h2>
+                <p>Fait à la main dans nos atelier, il vous accompagneras durant de nombreuses années.</p>
+            </article>
+        </div>
+        <div class="bloc2">
+            <div id="bloc2__cart">
+                <p id="empty__cart">Votre panier est vide</p>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <nav class="navbot">
+            <a href="./prod/pages/mentions.html" class="navbot__link">Mentions légale</a>
+            <a href="mailto:contact@oribears.com" class="navtbot__link">Contactez nous</a>
+        </nav>
+        
+    </footer>
+
+    
+    
+</body>
+</html>
