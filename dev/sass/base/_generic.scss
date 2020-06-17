@@ -27,7 +27,7 @@ time, mark, audio, video {
 }
 
 body {
-    background-color: $sable;
+    background-color: $pink-lavender;
 }
 
 #header {
@@ -35,13 +35,13 @@ body {
     width:90vw;
     height:15vh;
     margin: auto;
-    background-color: $camel;
-    color:$brown;
+    background-color: $purple-mountain-majesty;
+    color:$russian-violet;
     text-align: center;
     font-family:'Old Standard TT', serif; 
     font-size:4em;
     overflow: hidden;
-    border: 1px solid $havane;
+    border: 1px solid $purple-navy;
     border-radius: 0 0 10px 10px;
     
 
@@ -49,37 +49,47 @@ body {
 
         padding-top: 0.5em;
     }
+
+    a, a:hover, a:visited, a:active {
+        text-decoration: none;
+        color: $russian-violet
+    }
 }
 
 .navtop {
-    @include border;
+    overflow: hidden;
+    border: 1px solid $purple-navy;
+    border-radius:10px 10px 0 0;
     width: 90vw;
     text-align: right;
-    background-color: $camel;
+    background-color: $purple-mountain-majesty;
     font-family: 'Old Standard TT', serif;
-    margin: 1vh auto 1vh auto;
-    padding-top: 0.5em;
-    padding-bottom:0.5em;
+    margin: 1vh auto 0vh auto;
+    padding-top: 1em;
+    padding-bottom:1em;
     
 
     &__link {
 
         text-decoration: none;
-        color: $brown;
+        color: $russian-violet;
         font-size: 1.4em;
         margin:0 1em 0 1em ;
 
     }
 }
 
+
 .bloc1 {
 
-    @include border;
+    
     width:90vw;
     height: 40vh;
     margin:auto;
     position: relative;
     overflow: hidden;
+    border-left:1px solid $purple-navy;
+    border-right:1px solid $purple-navy;
     
     &__img {
     
@@ -102,7 +112,7 @@ body {
         padding-left:1em;
         font-family:'Old Standard TT', serif;
         font-size: 1.8em;
-        color:$brown;
+        color:$russian-violet;
 
         h2 {
             font-size: 1.2em;
@@ -114,18 +124,22 @@ body {
 }
 
 .bloc2 {
-    @include border;
+    
+    overflow: hidden;
+    border: 1px solid $purple-navy;
+    border-radius:0 0 10px 10px;
     width: 90vw;
-    margin:1vh auto 1vh auto;
-    background-color: $camel;
+    min-height: 20vh;
+    margin:0vh auto 1vh auto;
+    background-color: $purple-mountain-majesty;
     text-align: center;
-    padding: 3vh 2vw 3vh 2vw;
+    padding: 3vh 0vw 3vh 0vw;
     
     h2 {
         font-family:'Old Standard TT', serif; 
         font-size: 2.5em;
         margin: 5vh auto 5vh auto;
-        color: $brown;
+        color: $russian-violet;
     }
 
     h3 {
@@ -142,12 +156,13 @@ body {
         font-family:'Old Standard TT', serif; 
         font-size: 1.5em;
         margin: 5vh auto 5vh auto;
-        color: $brown;
+        color: $russian-violet;
+        width: 80%;
 
         img {
             @include border;
             transform: scale(1);
-            transition: transform 300ms ease-in-out;
+            transition: transform 600ms ease-in-out;
         }
         img:hover {
             transform: scale(2);
@@ -157,12 +172,38 @@ body {
             margin: 3vh auto 3vh auto;
         }
     }
-    &__option {
+    &__optionslabel {
         font-family:'Old Standard TT', serif; 
         font-size: 1.5em;
-        color: $brown;
-            
     }
+}
+#validate__msg {
+    font-family:'Old Standard TT', serif; 
+    font-size: 1.2em;
+    color: $russian-violet;
+
+}
+
+#empty__cart {
+    font-family:'Old Standard TT', serif; 
+    font-size: 2em;
+}
+
+.fail__msg {
+    font-family:'Old Standard TT', serif; 
+    font-size: 2em;
+    text-align: center;
+}
+
+#options {
+    color: $russian-violet;        
+}
+#addtocart__btn {
+    display: block;
+    margin: 2vh auto 2vh auto;
+    background-color: $pink-lavender;
+    border-radius: 5px;
+    padding:10px;
 }
 
 
@@ -170,8 +211,8 @@ body {
     width:70%;
     margin:1vh auto 1vh auto;
     box-sizing: border-box;
-    background-color: $camel;
-    border-top: 1px solid $havane;
+    background-color: $purple-mountain-majesty;
+    border-top: 1px solid $purple-navy;
     display: flex;
     
 
@@ -182,7 +223,7 @@ body {
     &__content {
         height:75%;
         font-family:'Old Standard TT', serif; 
-        color: $brown;
+        color: $russian-violet;
         font-size: 1.2em;
         padding-left: 3vh;
         padding-right: 3vh;
@@ -199,16 +240,16 @@ body {
     &__btn {
 
         @include border;
-        background-color: $lightbrown;
+        background-color: $lilac;
         font-family:'Old Standard TT', serif;
         font-size: 1em;
-        color: $sable;
+        color: $russian-violet;
         text-decoration: none;
         padding: 0.5em;
     }
     &__btn:hover {
 
-        background-color: $havane;
+        background-color: $purple-navy;
     }
 
 }
@@ -218,10 +259,10 @@ body {
     height:12vh;
     line-height: 12vh;
     margin: auto;
-    background-color: $camel;
+    background-color: $purple-mountain-majesty;
     overflow: hidden;
     font-family: 'Old Standard TT', serif;
-    border: 1px solid $havane;
+    border: 1px solid $purple-navy;
     border-radius:10px 10px 0 0;
     
 
@@ -236,7 +277,7 @@ body {
 
     a {
         margin: 0 2em 0 2em;
-        color:$brown;
+        color:$russian-violet;
         font-size:1.5em;
         text-decoration:none;
     
