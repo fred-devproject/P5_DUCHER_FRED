@@ -8,10 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Old+Standard+TT:ital@1&display=swap" rel="stylesheet">
     <link rel="icon" href="./favicon.ico" />
    
-    <title>Oribears Accueil</title>
+    <title>Oribears Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
 	<script>
-		objectsList();
+        $(document).ready(function(){
+            validOrder();
+        });	
 	</script> 
 </head>
 <body>
@@ -29,7 +32,14 @@
                 <p>Fait à la main dans nos atelier, il vous accompagneras durant de nombreuses années.</p>
             </article>
         </div>
-        <div class="bloc2">   
+        <div class="bloc2">
+            <article class="bloc2__validation">
+                <h3>ORIBEARS vous remercie pour votre commande</h2>
+                <p>Vous allez reçevoir un email de confirmation ainsi que le numero de suivi de votre commande</p>
+                <p>Numero de votre commande:</br><span id="orderId" class="bloc2__validation--orderid"></span></p>
+                <p>Montant total de vos achats:</br><span id="totalprice" class="bloc2__validation--totalprice"></span></p>
+            </article> 
+            <a href="index.html" class="bloc2__back">Revenir à la page d'accueil</a>
         </div>
     </main>
     <footer id="footer">

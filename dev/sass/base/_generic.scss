@@ -27,7 +27,7 @@ time, mark, audio, video {
 }
 
 body {
-    background-color: $pink-lavender;
+    background-color: $color5;
 }
 
 #header {
@@ -35,13 +35,14 @@ body {
     width:90vw;
     height:15vh;
     margin: auto;
-    background-color: $purple-mountain-majesty;
-    color:$russian-violet;
+    background-color: $color1;
     text-align: center;
     font-family:'Old Standard TT', serif; 
     font-size:4em;
     overflow: hidden;
-    border: 1px solid $purple-navy;
+    border-bottom: 3px solid $color3;
+    border-left: 3px solid $color3;
+    border-right: 3px solid $color3;
     border-radius: 0 0 10px 10px;
     
 
@@ -50,19 +51,24 @@ body {
         padding-top: 0.5em;
     }
 
-    a, a:hover, a:visited, a:active {
+    a {
         text-decoration: none;
-        color: $russian-violet
+        color:$color5;   
+    }
+    a:hover,:visited, a:active {
+        color: $color5;
     }
 }
 
 .navtop {
     overflow: hidden;
-    border: 1px solid $purple-navy;
+    border-top: 3px solid $color3;
+    border-left: 3px solid $color3;
+    border-right: 3px solid $color3;
     border-radius:10px 10px 0 0;
     width: 90vw;
     text-align: right;
-    background-color: $purple-mountain-majesty;
+    background-color: $color1;
     font-family: 'Old Standard TT', serif;
     margin: 1vh auto 0vh auto;
     padding-top: 1em;
@@ -72,9 +78,10 @@ body {
     &__link {
 
         text-decoration: none;
-        color: $russian-violet;
         font-size: 1.4em;
         margin:0 1em 0 1em ;
+        color: $color5;
+        
 
     }
 }
@@ -88,8 +95,9 @@ body {
     margin:auto;
     position: relative;
     overflow: hidden;
-    border-left:1px solid $purple-navy;
-    border-right:1px solid $purple-navy;
+    border-left:3px solid $color3;
+    border-right:3px solid $color3;
+    
     
     &__img {
     
@@ -100,7 +108,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0.8;
     }
 
     &__text {
@@ -112,11 +120,12 @@ body {
         padding-left:1em;
         font-family:'Old Standard TT', serif;
         font-size: 1.8em;
-        color:$russian-violet;
+        color: $color5;
 
         h2 {
             font-size: 1.2em;
             margin-bottom: 1em;
+            color: $color5;
         }
         
 
@@ -126,20 +135,25 @@ body {
 .bloc2 {
     
     overflow: hidden;
-    border: 1px solid $purple-navy;
+    border-bottom: 3px solid $color3;
+    border-left: 3px solid $color3;
+    border-right: 3px solid $color3;
     border-radius:0 0 10px 10px;
     width: 90vw;
     min-height: 20vh;
     margin:0vh auto 1vh auto;
-    background-color: $purple-mountain-majesty;
+    background-color: $color1;
     text-align: center;
     padding: 3vh 0vw 3vh 0vw;
+    display: flex;
+    flex-direction: column;
+    
     
     h2 {
         font-family:'Old Standard TT', serif; 
         font-size: 2.5em;
         margin: 5vh auto 5vh auto;
-        color: $russian-violet;
+        color: $color5;
     }
 
     h3 {
@@ -152,12 +166,42 @@ body {
         margin-bottom: 2vh;
     }
 
+    p {
+        color: $color5;
+    }
+
+    table {
+        width: 50%;
+        margin: auto;
+        border-collapse: collapse;
+        background-color: $color1;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 1.5em;
+        color: $color5;
+        
+    }
+    tr {
+        
+        padding: 5px;
+    }
+    th {
+        border: 2px solid $color3;
+        padding: 5px;
+    }
+    
+    td {
+        border: 2px solid $color3;
+        padding: 5px;
+    }
+
+    
+
     &__item {
         font-family:'Old Standard TT', serif; 
         font-size: 1.5em;
         margin: 5vh auto 5vh auto;
-        color: $russian-violet;
         width: 80%;
+        color: $color5;
 
         img {
             @include border;
@@ -175,35 +219,125 @@ body {
     &__optionslabel {
         font-family:'Old Standard TT', serif; 
         font-size: 1.5em;
+        color: $color5;
+    }
+
+    &__back {
+        color: $color5;
+    }
+
+    &__mention {
+        color: $color5;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 1em;
+        padding: 0vh 15vh 5vmin 15vh;
+    }
+    
+    &__validation {
+        font-family:'Old Standard TT', serif; 
+        font-size: 1.5em;
+        color: $color5;
+        
+        &--orderid {
+            color:$color3;
+        }
+
+        &--totalprice {
+            color: $color3;
+        }
+
     }
 }
+
+#contactbloc {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    width: 60%;
+    margin: auto;
+    color: $color5;
+}
+.identityBloc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+
+    &__legend {
+        font-weight: bold;
+        color: $color3;
+    }
+}
+
+.addressBloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    &__legend {
+        font-weight: bold;
+        color: $color3;
+    }
+}
+
+input {
+    margin: auto;
+}
+
+#substract_button {
+    margin-right: 5px;
+}
+#add_button {
+    margin-left: 5px;
+}
+
 #validate__msg {
     font-family:'Old Standard TT', serif; 
     font-size: 1.2em;
-    color: $russian-violet;
+    color: $color5;
+    
 
 }
 
 #empty__cart {
     font-family:'Old Standard TT', serif; 
     font-size: 2em;
+    color: $color5;
 }
 
 .fail__msg {
     font-family:'Old Standard TT', serif; 
     font-size: 2em;
     text-align: center;
+    color: $color5;
 }
 
-#options {
-    color: $russian-violet;        
-}
 #addtocart__btn {
     display: block;
     margin: 2vh auto 2vh auto;
-    background-color: $pink-lavender;
+    background-color: $color3;
     border-radius: 5px;
     padding:10px;
+    color: $color5;
+}
+
+#order__btn {
+    display: block;
+    margin: 2vh auto 2vh auto;
+    background-color: $color3;
+    border-radius: 5px;
+    padding:10px;
+    color: $color5;
+}
+
+#validorder__btn {
+    display: block;
+    margin: 2vh auto 2vh auto;
+    background-color: $color3;
+    border-radius: 5px;
+    padding:10px;
+    color: $color5;
 }
 
 
@@ -211,8 +345,8 @@ body {
     width:70%;
     margin:1vh auto 1vh auto;
     box-sizing: border-box;
-    background-color: $purple-mountain-majesty;
-    border-top: 1px solid $purple-navy;
+    background-color: $color1;
+    border-top: 2px solid $color3;
     display: flex;
     
 
@@ -222,52 +356,55 @@ body {
     }
     &__content {
         height:75%;
-        font-family:'Old Standard TT', serif; 
-        color: $russian-violet;
+        font-family:'Old Standard TT', serif;
         font-size: 1.2em;
         padding-left: 3vh;
         padding-right: 3vh;
         
         p {
             margin-bottom: 2vh;
+            color: $color5;
         }
         h3 {
             margin: 2vh auto 2vh auto;
             font-size: 1.8em;
-
+            color: $color5;
         }
     }
     &__btn {
 
         @include border;
-        background-color: $lilac;
+        background-color: $color3;
         font-family:'Old Standard TT', serif;
+        color: $color5;
         font-size: 1em;
-        color: $russian-violet;
         text-decoration: none;
         padding: 0.5em;
     }
     &__btn:hover {
 
-        background-color: $purple-navy;
+        background-color: $color5;
+        color: $color1;
     }
 
 }
+
 #footer {
 
     width:90vw;
     height:12vh;
     line-height: 12vh;
     margin: auto;
-    background-color: $purple-mountain-majesty;
+    background-color: $color1;
     overflow: hidden;
     font-family: 'Old Standard TT', serif;
-    border: 1px solid $purple-navy;
+    border-top: 3px solid $color3;
+    border-left: 3px solid $color3;
+    border-right: 3px solid $color3;
     border-radius:10px 10px 0 0;
     
 
 }
-
 
 .navbot {
 
@@ -277,9 +414,10 @@ body {
 
     a {
         margin: 0 2em 0 2em;
-        color:$russian-violet;
         font-size:1.5em;
         text-decoration:none;
+        color: $color5;
+        
     
     }
     
