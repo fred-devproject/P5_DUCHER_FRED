@@ -9,12 +9,13 @@
     <link rel="icon" href="./favicon.ico" />
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/apptest.js"></script>
+    <script src="./js/app.js"></script>
     <script>
         $(document).ready(function(){
             loadCartPage();
+            sendOrder();
         });
-        </script> 
+    </script> 
    
     <title>Votre panier</title>
 
@@ -37,14 +38,63 @@
             </article>
         </div>
         <div class="bloc2">
-            <div id="bloc2__cart">
-                <p id="empty__cart">Votre panier est vide</p>
+            <div id="bloc2__title">
             </div>
+            <div id="bloc2__cart">
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="cart__article">Article</th>
+                            <th id="cart__color">Couleur</th>
+                            <th id="cart__quantity">Quantité</th>
+                            <th id="cart__delete">Supprimer</th>                            
+                            <th id="cart__price">Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart__bloc">
+                        <tr>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="4">montant total de votre panier</th>
+                            <th id="total_cart"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <button id="order__btn">Passer commande</button>
+            </div>
+            <div id="bloc2__order" style="display:none">
+                <form method="POST" name="contactbloc" id="contactbloc">
+                    
+                        <fieldset class="identityBloc">
+                            <legend class="identityBloc__legend">Vos coordonnées</legend>
+                            <label for="nom">Nom :</label>
+                            <input type="text" id="lastname" placeholder="Nom" pattern="[A-Za-z]{1,}" required>
+                            <label for="prénom">Prénom :</label>
+                            <input type="text" id="firstname" placeholder="Prenom" pattern="[A-Za-z]{1,}" required>
+                            <label for="email">E-mail :</label>
+                            <input type="email" id="email" placeholder="votre email ici" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$" required>
+                            <span id="aideCourriel"></span>
+                        </fieldset>
+                        <fieldset class="addressBloc">
+                            <legend class="addressBloc__legend">Votre adresse de livraison</legend>
+                            <label for="adresse">Adresse :</label>
+                            <input type="text" id="address" placeholder="Adresse" pattern="[A-Za-z0-9\s]{1,}" required>
+                            <label for="ville">Ville :</label>
+                            <input type="text" id="city" pattern="[A-Za-z\s]{1,}"placeholder="Bearstown" required>
+                        </fieldset>
+                        <button type="submit" name="validation" id="validorder__btn">
+                            Valider
+                        </button>                
+                </form>
+            </div>
+            <a href="index.html" class="bloc2__back">Poursuivre mes achats</a>
         </div>
     </main>
     <footer id="footer">
         <nav class="navbot">
-            <a href="./prod/pages/mentions.html" class="navbot__link">Mentions légale</a>
+            <a href="mentions.html" class="navbot__link">Mentions légales</a>
             <a href="mailto:contact@oribears.com" class="navtbot__link">Contactez nous</a>
         </nav>
         

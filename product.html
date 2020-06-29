@@ -10,7 +10,7 @@
    
     <title>Oribears Accueil</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/apptest.js" defer></script>
+    <script src="js/app.js" defer></script>
 	<script>
     $(document).ready(function(){
         objectSelected();
@@ -35,18 +35,34 @@
         </div>
         <div class="bloc2">
             <article class="bloc2__item">
-            </article>            
-            <label for="options" class="bloc2__optionslabel">Choisissez votre couleur </label>
-                <select name="bearcolors" id="options" class="">
-                    <option value="">---Votre choix---</option>
+            </article>
+            <div>           
+                <label for="options" class="bloc2__optionslabel">Choisissez votre couleur: </label>
+                <select name="bearcolors" id="options">
                 </select>
+            </div>
+            <div>
+                <label for="productQuantity" class="bloc2__optionslabel">Quantité: </label>
+                <select name="quantchoice" id="productQuantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </div>
             <button id="addtocart__btn">Ajouter au panier</button>
             <div id="validate__msg"></div>
+            <a href="index.html" class="bloc2__back">Poursuivre mes achats</a>
         </div>
     </main>
     <footer id="footer">
         <nav class="navbot">
-            <a href="./prod/pages/mentions.html" class="navtbot__link">Mentions légales</a>
+            <a href="mentions.html" class="navtbot__link">Mentions légales</a>
             <a href="mailto:contact@oribears.com" class="navbot__link">Contactez nous</a>
         </nav>
         
