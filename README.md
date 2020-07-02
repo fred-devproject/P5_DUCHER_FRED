@@ -8,7 +8,7 @@ __GOALS__
 
 ---
 
-### PRESENTATION DOC.
+### :clipboard: PRESENTATION DOC.
 
 ---
 
