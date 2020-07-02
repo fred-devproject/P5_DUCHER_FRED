@@ -1,6 +1,6 @@
 # OPENCLASSROOMS PROJECT 5 
 
-:flags: __GOALS__
+:goals: __GOALS__
 * Validate data from external sources
 * Handle JavaScript events
 * Create a test plan for an application
