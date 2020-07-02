@@ -9,9 +9,12 @@
     <link rel="icon" href="./favicon.ico" />
    
     <title>Oribears Accueil</title>
-    <script src="js/app.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
-		objectsList();
+    $(document).ready(function(){
+        objectsList();
+    });
 	</script> 
 </head>
 <body>
@@ -19,7 +22,7 @@
         <h1><a href="index.html">Oribears</a></h1>
     </header>
     <nav class="navtop">
-        <a href="./panier.html" class="navtop__link">Panier</a>
+        <a href="./pages/panier.html" class="navtop__link">Panier</a>
     </nav>
     <main id="mainbloc">
         <div class="bloc1">
@@ -34,8 +37,8 @@
     </main>
     <footer id="footer">
         <nav class="navbot">
-            <a href="mentions.html" class="navbot__link">Mentions légales</a>
-            <a href="mailto:contact@oribears.com" class="navtbot__link">Contactez nous</a>
+            <a href="./pages/mentions.html" class="navbot__link">Mentions légales</a>
+            <a href="mailto:contact@oribears.com" class="navtbot__link">Contact</a>
         </nav>
         
     </footer>   
