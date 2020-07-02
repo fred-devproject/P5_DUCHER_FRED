@@ -1,6 +1,6 @@
 # OPENCLASSROOMS PROJECT 5 
 
-__GOALS__
+:flags: __GOALS__
 * Validate data from external sources
 * Handle JavaScript events
 * Create a test plan for an application
@@ -12,7 +12,7 @@ __GOALS__
 
 ---
 
-## How to install this project
+## :gear: How to install this project
 
 This repository contains the back end server for Project 5 of the Junior Web Developer path.
 
