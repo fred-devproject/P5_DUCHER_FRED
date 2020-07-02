@@ -98,10 +98,9 @@ body {
     border-left:3px solid $color3;
     border-right:3px solid $color3;
     
-    
     &__img {
     
-    widows: 100%;
+    widows: 50%;
     height:100%;
     background-image: url(images/bearsbackground.jpg);
     background-attachment: fixed;
@@ -119,7 +118,7 @@ body {
         padding-top: 3em;
         padding-left:1em;
         font-family:'Old Standard TT', serif;
-        font-size: 1.8em;
+        font-size: 0.9em;
         color: $color5;
 
         h2 {
@@ -127,8 +126,16 @@ body {
             margin-bottom: 1em;
             color: $color5;
         }
-        
 
+        @include responsive("small") {
+            font-size: 1.2em;
+        }
+        @include responsive("medium") {
+            font-size: 1.5em;
+        }
+        @include responsive("large") {
+            font-size: 1.8em;
+        }
     }
 }
 
@@ -168,6 +175,7 @@ body {
 
     p {
         color: $color5;
+        margin-top: 20px;
     }
 
     table {
@@ -205,8 +213,20 @@ body {
 
         img {
             @include border;
+            width:90%;
             transform: scale(1);
             transition: transform 600ms ease-in-out;
+
+            @include responsive("small") {
+                width:60%;
+            }
+            @include responsive("medium") {
+                width:50%;
+            }
+            @include responsive("large") {
+                width:40%;
+            }
+            
         }
         img:hover {
             transform: scale(2);
@@ -343,32 +363,56 @@ input {
 
 .card {
     width:70%;
-    margin:1vh auto 1vh auto;
+    margin:5vh auto 1vh auto;
     box-sizing: border-box;
     background-color: $color1;
     border-top: 2px solid $color3;
     display: flex;
+    flex-direction: column;
+
+    @include responsive("large") {
+        flex-direction: row;
+    }
+    
     
 
     &__pics {
         margin: 2vh auto 2vh auto;
+        width: 90%;
+        height: auto; 
         
+        @include responsive("small") {
+            width:75%;
+        }
+        @include responsive("medium") {
+            width:50%;
+        }
+        @include responsive("large") {
+            width:30%;
+        }
     }
+
     &__content {
         height:75%;
         font-family:'Old Standard TT', serif;
-        font-size: 1.2em;
+        font-size: 1em;
         padding-left: 3vh;
         padding-right: 3vh;
         
         p {
             margin-bottom: 2vh;
             color: $color5;
+            @include responsive("small") {
+               font-size: 1.2em;
+            }
         }
         h3 {
             margin: 2vh auto 2vh auto;
-            font-size: 1.8em;
+            font-size: 1.5em;
             color: $color5;
+            @include responsive("small") {
+                font-size: 1.6em
+            }
         }
     }
     &__btn {
@@ -377,9 +421,12 @@ input {
         background-color: $color3;
         font-family:'Old Standard TT', serif;
         color: $color5;
-        font-size: 1em;
+        font-size: 0.8em;
         text-decoration: none;
         padding: 0.5em;
+        @include responsive("small") {
+            font-size: 1em
+        }
     }
     &__btn:hover {
 
@@ -413,10 +460,14 @@ input {
     justify-content: space-between;
 
     a {
-        margin: 0 2em 0 2em;
+        margin: 0 1em 0 1em;
         font-size:1.5em;
         text-decoration:none;
         color: $color5;
+
+        @include responsive("small") {
+            margin: 0 2em 0 2em;
+        }
         
     
     }
