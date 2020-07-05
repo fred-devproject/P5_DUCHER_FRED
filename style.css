@@ -26,11 +26,11 @@ time, mark, audio, video {
 }
 
 body {
-  background-color: #dcdcddff;
+  background-color: #c5c3c6ff;
 }
 
 #header {
-  width: 90vw;
+  width: 95vw;
   height: 15vh;
   margin: auto;
   background-color: #46494cff;
@@ -60,7 +60,7 @@ body {
   border-left: 3px solid #1985a1ff;
   border-right: 3px solid #1985a1ff;
   border-radius: 10px 10px 0 0;
-  width: 90vw;
+  width: 95vw;
   text-align: right;
   background-color: #46494cff;
   font-family: "Old Standard TT", serif;
@@ -76,7 +76,7 @@ body {
 }
 
 .bloc1 {
-  width: 90vw;
+  width: 95vw;
   height: 40vh;
   margin: auto;
   position: relative;
@@ -117,12 +117,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .bloc1__text {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 }
 @media screen and (min-width: 998px) {
   .bloc1__text {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 }
 
@@ -132,7 +132,7 @@ body {
   border-left: 3px solid #1985a1ff;
   border-right: 3px solid #1985a1ff;
   border-radius: 0 0 10px 10px;
-  width: 90vw;
+  width: 95vw;
   min-height: 20vh;
   margin: 0vh auto 1vh auto;
   background-color: #46494cff;
@@ -162,13 +162,23 @@ body {
   margin-top: 20px;
 }
 .bloc2 table {
-  width: 50%;
+  width: 95%;
   margin: auto;
   border-collapse: collapse;
   background-color: #46494cff;
   font-family: "Times New Roman", Times, serif;
-  font-size: 1.5em;
+  font-size: 0.7em;
   color: #dcdcddff;
+}
+@media screen and (min-width: 480px) {
+  .bloc2 table {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bloc2 table {
+    font-size: 1.5em;
+  }
 }
 .bloc2 tr {
   padding: 5px;
@@ -198,17 +208,17 @@ body {
 }
 @media screen and (min-width: 480px) {
   .bloc2__item img {
-    width: 60%;
+    width: 50%;
   }
 }
 @media screen and (min-width: 768px) {
   .bloc2__item img {
-    width: 50%;
+    width: 40%;
   }
 }
 @media screen and (min-width: 998px) {
   .bloc2__item img {
-    width: 40%;
+    width: 30%;
   }
 }
 .bloc2__item img:hover {
@@ -234,14 +244,14 @@ body {
 }
 .bloc2__validation {
   font-family: "Old Standard TT", serif;
-  font-size: 1.5em;
+  font-size: 1em;
   color: #dcdcddff;
 }
 .bloc2__validation--orderid {
-  color: #1985a1ff;
+  color: #dcdcddff;
 }
 .bloc2__validation--totalprice {
-  color: #1985a1ff;
+  color: #dcdcddff;
 }
 
 #contactbloc {
@@ -415,7 +425,7 @@ input {
 }
 
 #footer {
-  width: 90vw;
+  width: 95vw;
   height: 12vh;
   line-height: 12vh;
   margin: auto;

@@ -6,7 +6,7 @@
 loadCartPage = ()=>{
 
     if(localStorage.getItem("userCart")){
-        let cartToDisplay = JSON.parse(localStorage.getItem("userCart"));
+        const cartToDisplay = JSON.parse(localStorage.getItem("userCart"));
         console.log(cartToDisplay);
 
         //Selection de l'élément du DOM ou s'affichera l'état du panier 
@@ -153,7 +153,7 @@ sendOrder = ()=>{
         const request = new Request((URL + order), {
             method: 'POST',
             body: JSON.stringify({contact, products}),
-            // Pour valider la requête on a besoin d'un objet JSON contenant "contact" && "products"
+            // Pour valider la requête on a besoin d'un objet JSON contenant "contact" et "products"
             headers: new Headers({
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
