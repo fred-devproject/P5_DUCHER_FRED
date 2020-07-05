@@ -9,7 +9,7 @@
 ---
 
 
-## PRESENTATION DOCS.
+## :clipboard:PRESENTATION DOCS.
 
 * Document de presentation et plan de test [Document de presentation](https://drive.google.com/file/d/1iQN2ACvEKaVU665nl7ZAW8WzQHeJfI90/view?usp=sharing)
 * Diagramme de fonctionnement [Diagramme de fonctionnement](https://drive.google.com/file/d/1gLdEUCWYeLo0u54NYEUwxjzA8GAQnXWD/view?usp=sharing)
