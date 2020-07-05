@@ -149,11 +149,11 @@ sendOrder = ()=>{
         });
 
         //requete POST avec methode Fetch
-        const order = "order";
-        const request = new Request((URL + order), {
+        
+        const request = new Request((URL + "order"), {
             method: 'POST',
-            body: JSON.stringify({contact, products}),
             // Pour valider la requête on a besoin d'un objet JSON contenant "contact" et "products"
+            body: JSON.stringify({contact, products}),
             headers: new Headers({
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -171,13 +171,15 @@ sendOrder = ()=>{
                 sessionStorage.setItem("confirmOrder", JSON.stringify(validOrder));
                 setTimeout(function() {window.location = 'validation.html'; }, 1500);
                 console.log(validOrder);
+            } else if(checkForm.checkValidity() === false){
+                // en cas d'erreur sur le formulaire affichage d'un message sur l'écran de l'utilisateur
+                apiFail = document.getElementById('bloc2__order');
+                apiFail.classList.add('fail__msg');
+                apiFail.innerHTML = "Veuillez verifier les données saisies dans le formulaire";
             }
         })
-        .catch(error=>{
-            // en cas d'erreur de chargement de l'API affichage d'un message sur l'écran de l'utilisateur + message d'erreur dans la console
-            apiPostFail = document.querySelector('.bloc2');
-            apiPostFail.classList.add('fail__msg');
-            apiPostFail.innerHTML = "Oups! Une erreur c'est produite lors du passage de votre commande veuillez réessayer";
+        .catch(error => {
+            // en cas d'erreur de chargement de l'API affichage d'un message d'erreur dans la console
             console.error(error);
         });
         
