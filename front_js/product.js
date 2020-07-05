@@ -29,14 +29,14 @@ if(objectId === null){
 
 // promise pour la requete API avec méthode Fetch
 getApiData = () =>{
-	return new Promise((objectList) =>{
+	return new Promise((objectSelected) =>{
 		let requestOptions = {
             method: 'GET', // utilisation de la methode GET
             redirect: 'follow'
         };  
         fetch((URL + idParams) , requestOptions)
         .then(response => response.json())
-        .then(result => objectList(result))
+        .then(result => objectSelected(result))
         .catch(error => {
             // en cas d'erreur de chargement de l'API affichage d'un message sur l'écran de l'utilisateur + message d'erreur dans la console
             apiFail = document.querySelector('.bloc2');

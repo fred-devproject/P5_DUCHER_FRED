@@ -27,12 +27,12 @@ time, mark, audio, video {
 }
 
 body {
-    background-color: $color5;
+    background-color: $color4;
 }
 
 #header {
 
-    width:90vw;
+    width:95vw;
     height:15vh;
     margin: auto;
     background-color: $color1;
@@ -66,7 +66,7 @@ body {
     border-left: 3px solid $color3;
     border-right: 3px solid $color3;
     border-radius:10px 10px 0 0;
-    width: 90vw;
+    width: 95vw;
     text-align: right;
     background-color: $color1;
     font-family: 'Old Standard TT', serif;
@@ -90,7 +90,7 @@ body {
 .bloc1 {
 
     
-    width:90vw;
+    width:95vw;
     height: 40vh;
     margin:auto;
     position: relative;
@@ -131,10 +131,10 @@ body {
             font-size: 1.2em;
         }
         @include responsive("medium") {
-            font-size: 1.5em;
+            font-size: 1.4em;
         }
         @include responsive("large") {
-            font-size: 1.8em;
+            font-size: 1.6em;
         }
     }
 }
@@ -146,7 +146,7 @@ body {
     border-left: 3px solid $color3;
     border-right: 3px solid $color3;
     border-radius:0 0 10px 10px;
-    width: 90vw;
+    width: 95vw;
     min-height: 20vh;
     margin:0vh auto 1vh auto;
     background-color: $color1;
@@ -179,13 +179,19 @@ body {
     }
 
     table {
-        width: 50%;
+        width: 95%;
         margin: auto;
         border-collapse: collapse;
         background-color: $color1;
         font-family:'Times New Roman', Times, serif;
-        font-size: 1.5em;
+        font-size: 0.7em;
         color: $color5;
+        @include responsive("small") {
+            font-size: 1.2em;
+        }
+        @include responsive("medium") {
+            font-size: 1.5em;
+        }
         
     }
     tr {
@@ -218,13 +224,13 @@ body {
             transition: transform 600ms ease-in-out;
 
             @include responsive("small") {
-                width:60%;
-            }
-            @include responsive("medium") {
                 width:50%;
             }
-            @include responsive("large") {
+            @include responsive("medium") {
                 width:40%;
+            }
+            @include responsive("large") {
+                width:30%;
             }
             
         }
@@ -255,15 +261,15 @@ body {
     
     &__validation {
         font-family:'Old Standard TT', serif; 
-        font-size: 1.5em;
+        font-size: 1em;
         color: $color5;
         
         &--orderid {
-            color:$color3;
+            color:$color5;
         }
 
         &--totalprice {
-            color: $color3;
+            color: $color5;
         }
 
     }
@@ -438,7 +444,7 @@ input {
 
 #footer {
 
-    width:90vw;
+    width:95vw;
     height:12vh;
     line-height: 12vh;
     margin: auto;
