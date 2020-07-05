@@ -261,15 +261,17 @@ body {
     
     &__validation {
         font-family:'Old Standard TT', serif; 
-        font-size: 1em;
+        font-size: 1.2em;
         color: $color5;
-        
+               
         &--orderid {
             color:$color5;
+           
         }
 
         &--totalprice {
             color: $color5;
+            
         }
 
     }
