@@ -159,29 +159,31 @@ sendOrder = ()=>{
                 'Content-Type': 'application/json'
             })
         });
-
-        fetch(request)
-        .then(response => response.json())
-        .then(response=>{
-            if (checkForm.checkValidity() === true){
-                let getOrderId = response.orderId;
-                let getTotalPrice = document.getElementById('total_cart').textContent;
-                localStorage.clear();
-                let validOrder = {getOrderId, getTotalPrice};
-                sessionStorage.setItem("confirmOrder", JSON.stringify(validOrder));
-                setTimeout(function() {window.location = 'validation.html'; }, 1500);
-                console.log(validOrder);
-            } else if(checkForm.checkValidity() === false){
-                // en cas d'erreur sur le formulaire affichage d'un message sur l'écran de l'utilisateur
-                apiFail = document.getElementById('bloc2__order');
-                apiFail.classList.add('fail__msg');
-                apiFail.innerHTML = "Veuillez verifier les données saisies dans le formulaire";
-            }
-        })
-        .catch(error => {
-            // en cas d'erreur de chargement de l'API affichage d'un message d'erreur dans la console
-            console.error(error);
-        });
+        if (checkForm.checkValidity() === true){
+            fetch(request)
+            .then(response => response.json())
+            .then(response=>{
+        
+                    let getOrderId = response.orderId;
+                    let getTotalPrice = document.getElementById('total_cart').textContent;
+                    localStorage.clear();
+                    let validOrder = {getOrderId, getTotalPrice};
+                    sessionStorage.setItem("confirmOrder", JSON.stringify(validOrder));
+                    setTimeout(function() {window.location = 'validation.html'; }, 1500);
+                    console.log(validOrder);
+            
+            })
+            .catch(error => {
+                // en cas d'erreur de chargement de l'API affichage d'un message d'erreur dans la console
+                console.error(error);
+            });
+        }
+        else if(checkForm.checkValidity() === false){
+            // en cas d'erreur sur le formulaire affichage d'un message sur l'écran de l'utilisateur
+            apiFail = document.getElementById('bloc2__order');
+            apiFail.classList.add('fail__msg');
+            apiFail.innerHTML = "Veuillez verifier les données saisies dans le formulaire";
+        }
         
     });
 };
